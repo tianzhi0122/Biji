@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    //1.自执行函数中的this永远都是window
+    //2.给元素绑定事件,给谁绑的this就是谁
+    box.onclick=change;
+        function change() {
+        this.style.backgroundColor="red";
+    }
+    //3.函数当做参数的时候  函数中的this是window
+    //数组中的遍历方法  第二个参数就是用来改变第一个参数函数中的this的
+    //箭头函数中没有指向  如果出现this指的是上一级的this
+</script>

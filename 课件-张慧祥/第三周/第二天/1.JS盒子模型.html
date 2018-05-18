@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+<!--
+JS提供了一系列获取CSS盒子模型的方法和属性
+13个属性
+特点1:它是一个数字而且是整数,是浏览器默认帮你四舍五入了
+特点2:没有单位
+特点3:只能获取不能修改  特例scrollLeft和scrollTop可以获取和修改
+
+height:
+1.只要是在样式中设置了height  不管内容有没有溢出height都是你设置的样式
+2.没有设置height  内容的真实高度就是它的height
+
+3个系列
+1.client 系列
+clientWidth : width+左右padding
+clientHeight : height+上下padding
+clientLeft : 左边框的宽度
+clientTop : 上边框的宽度
+
+2.offset 系列
+offsetWidth : clientWidth+左右border的宽
+offsetHeight : clientHeight+上下border的宽
+offsetLeft : 左偏移量
+offsetTop : 上偏移量
+offsetParent : 父级参照物
+
+3.scroll 系列
+scrollWidth : 如果内容没有溢出跟clientWidth一样如果有溢出表示真实内容的宽度+左padding
+scrollHeight : 如果内容没有溢出跟clientHeight一样如果有溢出表示真实内容的高度+上padding
+scrollLeft : 水平方向滚出的距离
+scrollTop : 垂直方向滚上去的距离
+
+-->
+</body>
+</html>
+<script>
+
+</script>

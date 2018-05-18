@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //AJAX请求
+    var xhr=new XMLHttpRequest()    //1.创建一个ajax对象
+    xhr.open("get","data/product.json",false)//2.打开一个请求地址
+    //请求方式：{method：get.post.delete.put.head.potion
+    // 请求地址{url}
+    //是否异步：不传，false=同步
+    xhr.onreadystatechange=function () {//3.监听状态改变且成功后获取数据
+        if (xhr.readyState==4&&xhr.status==200){
+            JSON.parse(xhr.responseText)
+        }
+    }
+    //4.发送AJAX请求
+    xhr.send()
+
+</script>

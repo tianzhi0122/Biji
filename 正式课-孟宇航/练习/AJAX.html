@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018 03 js</title>
+
+
+</head>
+<body>
+
+</body>
+</html>
+<script>
+//    1 创建AJAX对象
+    let xhr=new XMLHttpRequest();
+//    2打开地址
+    xhr.open("get","data/product.json",false);
+//    3 监听发生改变并且获取数据
+    xhr.onreadystatechange=function () {
+        if(xhr.readyState==4&&xhr.status==200){
+            console.log(JSON.parse(xhr.responseText));
+        }
+    };
+//4  发送请求
+    xhr.send(null);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+ 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+<!--
+this:是执行主体
+this是个对象,不可以赋值的
+在全局中this是window
+研究私有作用域下的this
+当一个函数执行 函数里面的this是谁就看函数执行的时候后面有没有点,有点的话点前面是谁this就是谁   没有电this就是window
+-->
+</body>
+</html>
+<script>
+    var a=10;
+    console.log(this.a);//window.a    10
+
+    function f1(){
+        console.log(this);
+    }
+    f1();
+
+    var obj={
+        fn:function () {
+            console.log(this);//obj
+        }
+    }
+    obj.fn();
+    var fn=obj.fn;
+    fn();
+</script>

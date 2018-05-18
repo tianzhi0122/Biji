@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var url="www.baidu.com?course1=JS&course2=JQ&course3=vue&course4=react&course5=node";
+    //将url按照"?"拆分，获取后面的内容
+    //将其按照"&"拆分为一个数组
+    //创建一个空对象obj
+    //循环遍历数组arr，将数组的每一项按照"="拆分为一个数组a[]
+    //将数组a中的第一项当做属性名，第二项为属性值
+    function f1(url) {
+        url=url.split("?")[1];
+        var arr=url.split("&");
+        var obj={};
+        arr.forEach((item)=>{
+            var a=item.split("=");
+            obj[a[0]]=a[1]
+        })
+        return obj
+    }
+
+    console.log(f1(url));
+
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+<!--
+call也是函数也有call方法
+f.call.call(x1)
+
+call(x1)执行的时候让前面的函数f.call执行 将f.call中的this变成x1   而f.call()中的this是f  将其变成了x1,一旦变成x1  在call的内部就是让x1执行,此时x1必须是一个函数
+
+两个一级两个以上的call执行最终都是第一个参数通过call执行将剩下参数传给call
+所以第一个参数必须是一个函数
+f.call.call(x1,x2,x3);   x1.call(x2,x3)
+f.call.call.call......(x1,x2,3)->x1.call(x2,x3)
+-->
+</body>
+</html>
+<script>
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script> var number=2;
+var obj={
+    number:4,
+    fn1:(function () {
+        this.number*=2;
+        number=number*2;
+        var number=3;
+        return function () {
+            this.number*=2;
+            number*=3;
+            alert(number);
+        }
+    })()
+};
+var fn1=obj.fn1;
+alert(number);
+fn1();
+obj.fn1();
+alert(window.number);
+alert(obj.number);
+</script>

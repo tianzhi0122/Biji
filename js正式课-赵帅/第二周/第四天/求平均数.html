@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //第一种方法
+    var ary=[1,5,9,15,500];
+    ary.sort((a,b)=>{return a-b})
+    ary.shift();
+    ary.pop();
+    console.log((function () {
+        var total = 0;
+        for (var i = 0; i < ary.length; i++) {
+            total += ary[i]
+        }
+        return total / ary.length;
+    })());
+
+    //第二种方法
+   /*
+   function sortAll() {
+        [].sort.call(arguments,(a,b)=>a-b);
+        [].pop.call(arguments);
+        [].shift.call(arguments);
+        return [].join.call((arguments,`+`)/arguments.length)
+    }
+    */
+
+</script>

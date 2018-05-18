@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //function 函数名(形参) {函数体}
+    //箭头函数是匿名函数
+    //(形参)=>{函数体}
+
+    //简写方式
+    //1.如果形参只有一个可以省略（）
+    //2.如果函数体只有一条语句而且是 return xxx 可以省略{}和return
+    function ff(x) {return typeof x;}// 等于 let ff=x=>typeof x;
+
+    let fn=(x)=>{
+        x++;
+        console.log(x);
+    };
+    fn(10);
+    let ary=[1,2,3,4,5,6,7,8];
+    ary.forEach((item,index)=>{
+        console.log(item);
+    })
+    console.log(ary.filter(item => item % 2));
+
+</script>

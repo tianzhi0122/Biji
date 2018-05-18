@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 变量提升：ji能够在浏览器中执行是因为浏览器给js提供了一个执行环境，这个环境就是全局作用域window
+    //当前作用域加载的时候会对带var和function关键字的进行声明和定义，带var只声明不定义，带function声明+定义
+
+    //变量提升的几种特殊情况
+    //1.等号右边的不进行变量提升
+    //2.自执行函数不进行变量提升
+    //3.return右边不进行变量提升，下边进行变量提升
+    //4.判断体中函数只声明不定义，当条件成立以后第一时间给函数定义
+    //5.连等的情况下，带var关键字的只声明，其他都相当于给window添加一个属性
+    //6.重名的情况下，不进行重复声明，只对其进行赋值
+
+    //let和const不进行变量提升  不给全局添加属性  不可以重复声明
+    //let和const不同点：const不可以进行重新定义，引用数据类型不可以修改引用地址    一旦声明必须赋值
+
+</script>

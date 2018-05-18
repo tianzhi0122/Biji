@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+</body>
+</html>
+<script>
+    //输出每一个li的索引
+    var list=document.getElementById("list");
+    var oLis=list.getElementsByTagName("li");
+
+    // for (var i=0;i<oLis.length;i++){
+    //     (function (i) {
+    //         oLis[i].onclick=function () {
+    //             console.log(i);
+    //         }
+    //     })(i)
+    // }
+    // console.log(i);
+
+    for (var i=0;i<oLis.length;i++){
+        oLis[i].onclick=(function (i) {
+            return function(){
+                console.log(i);
+            }
+            })(i)
+    }
+    console.log(i);
+    //通过形成一个私有作用域来保护或者存储一些私有变量 这种形式称为闭包
+</script>

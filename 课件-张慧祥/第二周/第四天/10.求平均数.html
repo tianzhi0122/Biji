@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 需求:去掉一个最大值,去掉一个最小值,求剩余数的平均值?
+    * */
+    var ary=[1,5,9,15,60,500];
+    /*function sortAll(ary) {
+        ary.sort((a,b)=>a-b);
+        //console.log(ary);//排序
+        ary.shift();
+        ary.pop();
+        //console.log(ary);//删除最大最小值
+        var total=0;
+        for (var i=0;i<ary.length;i++){
+            total+=ary[i]
+        }
+        //console.log(total);//总和
+        return total/ary.length;
+    }*/
+
+
+    //第二种
+    /*function sortAll(){
+        [].sort.call(arguments,(a,b)=>a-b);
+        [].pop.call(arguments);
+        [].shift.call(arguments);
+        return eval([].join.call(arguments,'+'))/arguments.length
+    }
+
+    console.log(sortAll(1, 5, 9, 15, 60, 500));*/
+
+    //第三种
+    function sortAll(){
+        var ary=Array.prototype.slice.call(arguments);
+        arguments.__proto__=Array.prototype;
+        var ary=arguments;
+        ary.sort((a,b)=>a-b);
+        ary.pop();
+        ary.shift();
+        return eval(ary.join('+'))/ary.length
+    }
+    console.log(sortAll(1, 5, 9, 15, 60, 500));
+</script>

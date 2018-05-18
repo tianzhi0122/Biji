@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<ul id="list">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>
+<script>
+    let oLis=document.getElementById("list").getElementsByTagName("li");
+    for (var i=0;i<oLis.length;i++){
+        oLis[i].i=i;
+        oLis[i].onclick=function(){
+            //this：给谁绑定事件this就是谁
+        console.log(this.i);
+        }
+    }
+</script>

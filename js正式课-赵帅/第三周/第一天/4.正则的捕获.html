@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * exec：返回值是一个数组/null
+    * 1.懒惰性：一次捕获一个  解决懒惰性加全局修饰符g 进行多次捕获
+    * 2.贪婪性：一次捕获最长的 解决贪婪性在量词元字符后加? 解决量词取值
+    * 捕获：正则的捕获是使用exec来捕获的，捕获之前要进行验证，验证成功捕获出符合规则的字符串，验证不成功返回null
+    * 返回的数组：
+    * 第一项是大正则捕获的内容
+    * 第二项是分组捕获的内容
+    * 第三项是index：字符串中开始捕获的索引
+    * 第四项是input：原字符串
+    * 第五项是groups：小分组
+    *
+    * exec 返回值就是多几项 有几个分组就多几项
+    *
+    * 我们在正则当中加的小括号不一定都是为了分组捕获，也有可能是为了提高优先级或者分组引用，如果我们只是为了加一个括号，我们需要添加一个?:只匹配不捕获
+    * */
+
+    /*
+    * match     找到符合当前正则规则的字符
+    * 1.不加g 得到的结果跟exec一样
+    * 2.加g 一次全部捕获到 没有index，input，groups属性
+    * 3.分组情况下 加g 但是不会捕获分组内容
+    *
+    * replace    替换  第二个参数是什么就替换什么  replace方法是函数的时候return什么就是替换什么  $1匹配到的第一个
+    * search    搜索符合当前正则规则的索引
+    * split     找到符合当前正则规则的字符并且替换成逗号
+    * */
+</script>

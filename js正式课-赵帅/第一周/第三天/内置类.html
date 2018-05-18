@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 内置类
+    * 基本数据类型：
+    * Number 数字类
+    * String 字符串；类
+    * Boolean 布尔类
+    * Null
+    * Undefined
+    *
+    * 引用数据类型
+    * Object 对象类  包括：Array 数组类 、RegExp 正则类 、Date 时间类
+    * Function 函数类
+    *
+    *
+    *
+    * in：可以找到该对象的私有属性和其他属性
+    * hasOwnProperty:只能查找该对象上的私有属性方法
+    *
+    * */
+
+    var a={name:"zhufeng"}
+    hasPubProperty("toString",a)
+    function  hasPubProperty() {
+        if (name in a){
+            return a
+        }
+        else {return null}
+    }
+
+    console.log(a);
+
+
+</script>

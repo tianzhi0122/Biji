@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018 03 js</title>
+
+
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //AJAX请求
+    //1 创建一个AJAX对象
+    var xhr=new XMLHttpRequest();
+
+    //2 打开一个请求地址
+    //    请求方式：【get post delete put head option】
+    //请求地址【url】
+    //是否异步：不传。false==同步
+    xhr.open("get","data/product.json",false);
+
+    //3 监听状态改变并且成功后获取数据
+    xhr.onreadystatechange=function () {
+        if(xhr.readyState==4&& xhr.status==200){
+            console.log(JSON.parse(xhr.responseText));
+        }
+    };
+    //4 发送AJAX请求
+    xhr.send()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+ 

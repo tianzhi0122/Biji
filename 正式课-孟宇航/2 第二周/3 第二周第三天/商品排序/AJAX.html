@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018 03 js</title>
+
+
+</head>
+<body>
+
+</body>
+</html>
+<script>
+//    1 创建函数
+    let xhr= new XMLHttpRequest;
+//    2 打开数据
+    xhr.open("get","data/product.json",false);
+//    3 当监听状态发生改变时获取数据
+    xhr.onreadystatechange=function () {
+        if(xhr.readyState==4&&xhr.status==200){
+            console.log(JSON.parse(xhr.responseText));
+        }
+    };
+//    4 发送
+    xhr.send(null)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+ 

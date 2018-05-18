@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var number=2;//4    8
+    var obj={
+        number:4,//8
+        fn1:(function () {//私有变量  number
+            this.number*=2;//window.number=4
+            number=number*2;//number=undefined*2=NaN
+            var number=3;//number=3    9    27
+            return function () {//xxxfff000
+                this.number*=2;//window.number=8     obj.number=8
+                number*=3;
+                alert(number);//9
+            }
+        })()
+    };
+    var fn1=obj.fn1;//xxxfff000
+    alert(number);//4
+    fn1();//this->window
+    obj.fn1();//this->obj
+    alert(window.number);
+    alert(obj.number);
+
+</script>

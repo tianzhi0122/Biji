@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 闭包:函数执行的时候形成的私有作用域,保护里面的私有变量不受外界的干扰,这种保护机制我们叫做闭包
+    *保存机制:函数执行结束后,里面的引用数据类型被外面的(变量或事件)所占有,形成可一个不销毁的私有作用域,里面的私有变量也就不会被销毁.
+    * */
+
+    //有一个变量b 有一个函数fn   让fn每次执行的时候 ,b依次累加(闭包形式)
+   var fn=(function () {
+       var b=1;
+       return function () {
+           return b++
+       }
+   })();
+    fn()
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*call方法
+    * 1.让call前面这个方法执行
+    * 2.第一个参数改变call前面方法中的this
+    * 3.第二个及第二个以后的参数分别传入call前面这个方法中作为参数
+    * "use strict"  严格模式
+    * 非严格模式下，不传和传null、undefined的时候this都是window
+    * 严格模式下，给this传什么就是什么
+    * 两个以及两个以上的call出现时，让第一个参数执行，并且第一个参数必须是函数
+    * */
+
+    //call方法原理
+    //重写call方法，考虑的几点
+    //1.首先必须考虑在函数的原型上扩展方法
+    //2.传参 是否要给这个方法传参
+    //3.实现什么功能
+    //4.是否有返回值 返回值是什么
+    Function.prototype.mycall=function (obj,...arg) {
+        //1.改变this
+        //2.让该方法执行
+        //3.第二个以及以后的参数依次传入this当中
+
+    }
+
+
+
+    /*
+    * apply作用
+    * 1.让apply前面方法执行
+    * 2.第二个参数是一个数组，依次传入apply前面这个方法中
+    * 3.第一个参数改变apply前面方法当中的this
+    * */
+
+
+
+    /*
+    * bind
+    * 1.返回一个新的函数
+    * 2.改变该函数中的this
+    * 3.第二个以及第二个以后的参数作为参数传给前面的函数
+    * */
+    Function.prototype.bind=function () {
+        var _this=this;
+        var obj=arguments[0];
+        var newAry=Array.prototype.slice.call(arguments,1);
+        return function () {
+            _this.apply(obj,newAry)
+        }
+    }
+    function fn() {
+
+    }
+    var f=fn.bind(null,1,2,3,4,5)
+</script>

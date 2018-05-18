@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018 03 js</title>
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+</head>
+<body>
+<div class="container">
+    <div id="header">
+        <span>排序</span>
+        <a href="javascript:;" attr="time">
+            上架时间
+            <i class="up"></i>
+            <i class="down"></i>
+        </a>
+        <a href="javascript:;" attr="price">价格
+        <i class="up"></i>
+            <i class="down"></i></a>
+        <a href="javascript:;" attr="hot">热度
+        <i class="up"></i>
+        <i class="down"></i></a>
+
+    </div>
+    <div class="clear"></div>
+    <ul id="list">
+
+    </ul>
+
+
+
+
+</div>
+<script src="index.js"></script>
+</body>
+</html>
+<script>
+
+    var c =1
+     function Fn(){
+         var a =1 ;
+         //{}
+         this.c =c
+
+         this.name = 'zhufeng';
+         this.age = function(){
+             console.log(this);
+         }
+     }
+     var f1 = new Fn();
+     var f2 = new Fn;//hanshu
+     f1.name == f2.name //zhu
+     f1.sex = 'boy'
+    f1.c =c
+ console.log(f1.c); //
+    f1.age()
+
+
+
+
+</script>
+ 

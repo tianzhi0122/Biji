@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2018 03 js</title>
+
+
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    Function.prototype.mycall=function () {
+      var obj=arguments[0],newAry=[];
+        for(var i=0;i<arguments.length;i++){
+            newAry[i-1]=arguments[i]
+        }if(obj==undefined){
+            eval("this('+newAry+')")
+        }else {
+            obj.__proto__.fn
+        }
+    };
+
+    var fn=function () {
+
+    };
+    fn.mycall(null,1,2,3,4)
+
+
+</script>
+ 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+<!--
+Function.prototype.call=function(){
+call方法中的this一定是当前使用call的那个函数
+1.让前面的函数执行 this（）
+2.call中从第二个参数开始是给this传参数用的
+}
+-->
+</body>
+</html>
+<script>
+    Function.prototype.call=function (obj,...args) {
+        //...args:将除了第一个参数以外的所有参数获取 变成一个数组
+        //this->f
+        if(obj==undefined){ //obj:不传 undefined null
+            //让f执行 将f中的this变成window
+            //给this传参数的时候是将args展开传的
+            this(...args);//就相当于 f(), this->window
+        }else {
+            //将this(这里是f)中的this变成obj
+            //给obj所属的原型上增加一个 fn属性值是this代表的函数(这里是f)
+            //为了防止在控制台打印能看见fn 我们将其加在原型上
+            obj.__proto__.fn=this;//他俩共用一个地址
+            obj.fn(...args);//都是只同一个地址的函数执行但是这次this就变成了obj
+            //用完了将其删除
+            delete obj.__proto__.fn;
+        }
+    };
+
+
+    //纯净版
+    Function.prototype.call=function (obj,...args) {
+        if (obj==undefined){
+            this(...args)
+        } else{
+            obj.__proto__.fn=this;
+            obj.fn(...args);
+            delete obj.__proto__.fn;
+        }
+    }
+</script>

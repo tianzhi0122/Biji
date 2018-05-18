@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 1.中括号中的特殊字符都代表本身的含义
+    * 2.\d \w \s 代表它本身的含义
+    * 3.-在中括号中代表范围的意思，如果左右两边没有就代表它本身的含义
+    * 4.中括号中的两位数，都是一个一个的一位数
+    * */
+    var reg=/^(1[8-9]|[2-5][0-9]|6[0-5])$/;
+    console.log(reg.test("18"));
+
+</script>

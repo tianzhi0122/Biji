@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+<ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+</body>
+</html>
+<script>
+    //输出每一个的索引
+    var list=document.getElementById("list");
+    var oLst=list.getElementsByTagName("li");
+
+    for (var i=0;i<oLst.length;i++){
+        oLst[i].onclick=(function (i) {
+            return function () {
+            console.log(i);//4
+            }
+        })(i)
+    }
+    console.log(i);
+
+
+    //通过形成一个私有作用域来保护或者存储一些私有变量  这种形式成为闭包
+</script>

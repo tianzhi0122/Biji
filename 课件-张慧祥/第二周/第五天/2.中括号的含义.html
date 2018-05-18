@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    /*
+    * 1.中括号中的特殊字符都代表本身的含义
+    * 2.\d   \w  \s  代表它本身的含义
+    * 3. -  在中括号中代表范围的意思,如果左右两边没有代表它本身的含义
+    * 4.中括号中的两位数,都是一个一个位数
+    * */
+
+    /*
+    * 需求:写一个正则符合18-65之间
+    * */
+
+    var reg=/(1[8-9])|(2-5]\d)|(6[0-5])/;
+    console.log(reg.test("18"));
+
+</script>

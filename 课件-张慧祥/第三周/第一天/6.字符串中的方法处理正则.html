@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //split  按照指定字符拆分为数组
+    var str="1+2*3-4/5";//["1","2","3","4","5"]
+    console.log(str.split(/[+*/-]/g));
+    var str="1+2+3+4+5";//["1","2","3","4","5"]
+    console.log(str.split("+"));
+
+    //search
+    console.log(str.search("1"));//0
+    console.log(str.search(/\d/g));//0
+
+    //replace(a,b)
+    //如果想一次全部替换  第一个参数写一个正则并且加上g
+    var str="1+2+3+4+5";
+    console.log(str.replace(/\+/g, "*"));//1*2*3*4*5
+
+</script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+</head>
+<body>
+
+<!--
+exec:返回值是一个数组/null
+1.懒惰性:一次捕获一个  解决懒惰性加全局修饰符g   进行多次捕获
+
+字符串中的方法match
+1).不加g  得到的结果跟exec一样
+2).加g  一次全部捕获到  没有index,input,groups属性
+3).分组情况下  加g  但是不会捕获分组内容
+
+2.贪婪性:一次捕获符合要求最长的   主要因为量词元字符的存在导致的
+
+
+
+-->
+</body>
+</html>
+<script>
+    /*
+  * 捕获:正则的活不活是使用exec来捕获的.捕获之前要进行验证,验证成功捕获出符合规则的字符串,验证不成    功,返回bull
+  * 返回的数组:
+  * 1.大正则捕获的内容
+  * 2.分组捕获的内容
+  * 3.index:字符串中从开始捕获的索引
+  * 4.input:原字符串
+  * 我们在正则当中假的小括号,不一定都是为了分组捕获,也可能是为了提高优先级或者分组引用,如果我们只是为了加一个括号,我们需要添加一个?:是匹配不捕获
+  * */
+
+    //match
+    //replace
+    //console.log(str.replace(reg, "000"));//第二个参数是什么替换什么
+    /*console.log(str.replace(reg, function () {  //replace方法return什么就是替换什么
+        return "000"
+    }));*/
+    //search
+    //search  方法用来找符合规则的索引
+    //split
+    let arr=[];
+    let r=reg.exec(str);
+    while (r){
+        arr.push(r[0]);
+        r=reg.exec(str);
+    }
+    //捕获分组问题
+    //exec  的返回值就会多几项  有几个分组就多几项
+    //索引为0:大正则捕获的内容
+    //      1:第一个分组捕获的内容
+    //      2.第二个
+    //      ...
+    //index:  大正则捕获的内容首字符索引
+    //input:  原字符串
+
+    //如果想让分组的内容不被捕获出来加上?:
+</script>
+<script>
+    //贪婪性
+    //解决贪婪性  字量词元字符后面加?   就是解决量词的取值
+</script>

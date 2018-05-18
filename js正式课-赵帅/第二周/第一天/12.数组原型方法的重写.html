@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201803JS</title>
+    <meta name="description" content=""/>
+    <meta name="Keywords" content=""/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //1.pop()  原数组改变 返回值删除的那一项
+    Array.prototype.pop=function () {
+        let item=this[this.length-1];
+        this.length--;
+        return item;
+    }
+    let arr1=[1,2,3];
+    console.log(arr1.pop());
+    console.log(arr1);
+    //2.shift()
+    Array.prototype.shift=function () {
+     let item=this[0];
+     for (var i=0;i<this.length;i++){
+         this[i]=this[i+1];
+     }
+     this.length--;
+        return item;
+    }
+    //3.push()
+    Array.prototype.push = function () {
+        for (var i=0;i<arguments.length;i++){
+            this[this.length]=arguments[i]
+        }
+        return this;
+    }
+    //4.indexOf(item)
+    Array.prototype.indexOf=function (item) {
+        for (var i=0;i<this.length;i++){
+            if (item==this[i]){
+                return i;
+            }
+        }
+    }
+    //forEach()
+    Array.prototype.forEach=function (fn) {
+        for (var i=0;i<this.length;i++){
+            fn(this[i],i,this)
+        }
+    }
+
+    //map
+    Array.prototype.map=function (fn) {
+        let ary=[];
+        for (var i=0;i<this.length;i++){
+            ary[i]=fn(this[i],i,this);
+        }
+        return ary;
+    }
+
+</script>
